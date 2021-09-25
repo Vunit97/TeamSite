@@ -1,0 +1,327 @@
+* {
+  font-family: "Open sans", sans-serif;
+}
+
+.extra-container {
+  max-width: 1100;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.push-y {
+  padding: 4rem 0;
+}
+
+/*---- About Info---*/
+#about-kris h2 {
+  text-align: center;
+  color: #555 !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#about-kris .headline {
+  text-align: center;
+}
+
+#about-kris h2::after {
+  content: "";
+  background: #ffbc00;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+
+#about-kris .about-info {
+  display: grid;
+  grid-gap: 1.2rem;
+  grid-template-areas:
+    "bioImage bio bio"
+    "aw1 aw2 aw3";
+}
+
+/* Grid Areas */
+#about-kris .bio-image {
+  grid-area: bioImage;
+  width: 100%;
+}
+
+#about-kris .about-bio {
+  grid-area: bio;
+  border-left: 3px solid #ffbc00;
+  padding: 0.8rem;
+  background: #f4f4f4;
+}
+
+.award-1 {
+  grid-area: aw1;
+}
+.award-2 {
+  grid-area: aw2;
+}
+.award-3 {
+  grid-area: aw3;
+}
+
+.award-1,
+.award-2,
+.award-3 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-1 .fas,
+.award-2 .fas,
+.award-3 .fas {
+  color: #ffbc00;
+  margin: 1rem;
+}
+
+/* Technical Skills */
+#about-kris-skills {
+  background: #333;
+  color: #fff;
+}
+
+#about-kris-skills h2,
+#services h2 {
+  text-align: center;
+  color: #fff !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#currentwork h2,
+#about-kris-testimonials h2,
+#about-kris-work h2 {
+  text-align: center;
+  color: #555 !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#about-kris-skills h2::after,
+#services h2::after,
+#currentwork h2::after,
+#about-kris-testimonials h2::after,
+#about-kris-work h2::after {
+  content: "";
+  background: #ffbc00;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+
+#about-kris-skills .progress {
+  overflow: hidden;
+  height: 20px;
+  background: #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.8rem;
+}
+
+#about-kris-skills .progress div {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  background: #ffbc00;
+}
+
+/* Services */
+.services .col-md-4:hover {
+  background: #ffbc00;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+/* Logos */
+#about-kris-logos {
+  background: #f4f4f4;
+}
+
+#about-kris-logos .about-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+#about-kris-logos .about-logos img {
+  width: 70%;
+}
+
+/* Recent Work */
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  position: relative;
+  background: #ffbc00;
+  overflow: hidden;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: inherit;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Main Color as overlay */
+.item:hover:after {
+  transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+}
+
+/* Scale on hover */
+.item:hover .item-image {
+  transform: scale(1.2);
+}
+
+/* Text on hover */
+.item:hover .item-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.item-image {
+  height: auto;
+  transform: translateZ(0);
+  display: block;
+  transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.item-image:before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+  overflow: hidden;
+}
+
+.item-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+.item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  transform: translateY(-20%);
+  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
+    transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition-delay: 300ms;
+}
+
+.item-text-wrap {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.item-text-title {
+  font-size: 2rem;
+  padding: 0 1rem;
+  margin: 5px 0 0 0;
+}
+
+.item-text-category {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Testimonials */
+#about-kris-testimonials .testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+
+#about-kris-testimonials .testimonials ul {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#about-kris-testimonials p {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#about-kris-testimonials .testimonials img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+  #about-kris .about-info {
+    grid-template-areas:
+      "bioImage"
+      "bio"
+      "aw1"
+      "aw2"
+      "aw3";
+  }
+  /* Stack Grid */
+  #about-kris-testimonials .testimonials,
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #about-kris-logos {
+    display: none;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 658px) {
+  #about-kris .about-info {
+    grid-template-areas:
+      "bioImage"
+      "bio"
+      "aw1"
+      "aw2"
+      "aw3";
+  }
+  /* Stack Grid */
+  #about-kris-testimonials .testimonials,
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #about-kris-logos {
+    display: none;
+  }
+}

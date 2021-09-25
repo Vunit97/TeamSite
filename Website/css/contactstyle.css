@@ -1,0 +1,81 @@
+body {
+  font-family: "Open sans", sans-serif !important;
+}
+
+.extra-container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.bg-main {
+  background: #ffbc00;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+#contact-a h2 {
+  text-align: center;
+  color: #555 !important;
+  padding-bottom: 10px;
+}
+
+#contact-a h2::after {
+  content: "";
+  background: #ffbc00;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+
+#contact-a .text-fields {
+  display: grid;
+  grid-template-areas:
+    "name1 email1"
+    "name email"
+    "subject phone"
+    "message message";
+
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+/* Grid Areas */
+#contact-a .name-input {
+  grid-area: name;
+}
+#contact-a .subject-input {
+  grid-area: subject;
+}
+#contact-a .email-input {
+  grid-area: email;
+}
+#contact-a .phone-input {
+  grid-area: phone;
+}
+#contact-a .message-input {
+  grid-area: message;
+  height: 150px;
+}
+
+#contact-a .text-input {
+  padding: 0.5rem 1rem;
+}
+
+#contact-a button[type="submit"] {
+  width: 50%;
+}
+
+#contact-c {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#contact-c h1 {
+  text-align: center;
+  font-size: 4rem;
+}

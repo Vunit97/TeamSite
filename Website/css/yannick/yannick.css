@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+:root {
+  --primary-color: #425b84;
+  --secondary-color: #5b7bb4;
+  --max-width: 1100px;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.py-yannick {
+  margin: 0 3rem;
+}
+
+/* Home Section */
+.home-yannick {
+  display: flex;
+  background: url("../../img/yannick/profilePic.jpg") no-repeat center
+    center/cover;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+}
+
+.home-yannick .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home-yannick .home-yannick-content .text-1 {
+  font-size: 27px;
+}
+
+.home-yannick .home-yannick-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home-yannick .home-yannick-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home-yannick .home-yannick-content .text-3 span {
+  color: crimson;
+  font-weight: 500;
+}
+
+.home-yannick .home-yannick-content a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: 0.6s;
+  text-decoration: none;
+}
+
+.home-yannick .home-yannick-content a:hover {
+  color: crimson;
+  background: none;
+}
+
+/* About Section */
+#about-yannick {
+  margin-bottom: 30px;
+}
+
+.about-yannick .about-yannick-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-yannick .about-yannick-content .left-yannick {
+  width: 45%;
+}
+
+.about-yannick .about-yannick-content .left-yannick img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about-yannick .about-yannick-content .right-yannick {
+  width: 55%;
+}
+
+.about-yannick .about-yannick-content .right-yannick .text-yannick {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-yannick .about-yannick-content .right-yannick .text-yannick span {
+  color: crimson;
+}
+
+.about-yannick .about-yannick-content .right-yannick p {
+  text-align: justify;
+}
+
+.about-yannick .about-yannick-content .right-yannick a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: 0.6s;
+  text-decoration: none;
+}
+
+.about-yannick .about-yannick-content .right-yannick a:hover {
+  color: crimson;
+  background: none;
+}
+
+#about-yannick h2 {
+  text-align: center;
+  color: #555 !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#about-yannick h2::after,
+#services h2::after,
+#currentwork-yannick h2::after {
+  content: "";
+  background: crimson;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+
+/* Services */
+#services h2,
+#currentwork-yannick h2 {
+  text-align: center;
+  color: #fff !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.services .col-md-4:hover {
+  background: crimson;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+/* Progress */
+.progress-bar {
+  background: crimson;
+}
+
+/* Timeline */
+#currentwork-yannick {
+  background: #111;
+}
+
+.timeline {
+  line-height: 1.5;
+  /* background: var(--primary-color); */
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+.timeline ul li {
+  list-style: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: crimson;
+}
+
+/* Boxes */
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 1rem;
+  background: crimson;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Right Side */
+.timeline ul li:nth-child(odd) div {
+  left: 40px;
+  transform: translateX(200px);
+}
+
+/* Left Side */
+.timeline ul li:nth-child(even) div {
+  left: -434px;
+  transform: translateX(-200px);
+}
+
+/* Dots */
+.timeline ul li:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: #333;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+/* Arrow Base */
+.timeline .dots div:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Right Side Arrows */
+.timeline ul li:nth-child(odd) div:before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent crimson transparent transparent;
+}
+
+/* Left Side Arrows */
+.timeline ul li:nth-child(even) div:before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent crimson;
+}
+
+/* Showboxes */
+.timeline ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+  background: crimson;
+}
+
+.timeline ul li.show:after {
+  background: var(crimson);
+}
+
+@media (max-width: 1104px) {
+  .home-yannick .max-width {
+    margin-left: 0;
+  }
+
+  .about-yannick .about-yannick-content .left-yannick img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 947px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  /* Home Section */
+  .home-yannick .home-yannick-content .text-2 {
+    font-size: 70px;
+  }
+
+  .home-yannick .home-yannick-content .text-3 {
+    font-size: 35px;
+  }
+
+  .home-yannick .home-yannick-content a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+
+  .max-width {
+    max-width: 800px;
+  }
+
+  .about-yannick .about-yannick-content .column-yannick {
+    width: 100%;
+  }
+
+  .about-yannick .about-yannick-content .left-yannick {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about-yannick .about-yannick-content .right-yannick {
+    flex: 100%;
+  }
+
+  .about-yannick .about-yannick-content .right-yannick .text-yannick {
+    text-align: center;
+  }
+
+  .timeline ul li div {
+    width: 250px;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: -284px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Home Section */
+  .home-yannick .home-yannick-content .text-2 {
+    font-size: 50px;
+  }
+
+  .home-yannick .home-yannick-content .text-3 {
+    font-size: 27px;
+  }
+
+  .home-yannick .home-yannick-content a {
+    font-size: 20px;
+    padding: 9px 25px;
+  }
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+
+  .timeline ul li div {
+    width: calc(100vw -90px);
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+
+  .timeline ul li:nth-child(even) div:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #ddd transparent transparent;
+  }
+}
