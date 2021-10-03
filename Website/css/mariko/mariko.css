@@ -101,7 +101,7 @@ body {
 .flex-items {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   height: 100%;
 }
@@ -160,7 +160,7 @@ body {
 
 .flex-columns img {
   width: 100%;
-  height: 100%;
+  height: 466px;
   object-fit: cover;
 }
 
@@ -190,6 +190,21 @@ body {
   background: #28a745;
 }
 
+#services h2 {
+  text-align: center;
+  color: #fff !important;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#services h2::after {
+  content: "";
+  background: #28a745 !important;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
 /* Services */
 .services .col-md-4:hover {
   background: #28a745;
